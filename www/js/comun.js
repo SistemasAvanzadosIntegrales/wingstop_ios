@@ -348,7 +348,7 @@ function pre_registro() {
  **/
 function guardar_datos() {
    
-    var cumple=jQuery.trim($('#txtCumple').val());
+    /*var cumple=jQuery.trim($('#txtCumple').val());
     var fecCum="";
     var fecHoy="";
     if(cumple!=""){
@@ -356,14 +356,15 @@ function guardar_datos() {
         fecCum=new Date(fecCum[0],fecCum[1]-1,fecCum[2]);
         fecHoy=new Date();
     }//if
+    */
     
     if( !$('#politicas').is(':checked') ) {
         $("#alertaRegistro").html('<i class="fa fa-warning fa-lg"></i>&nbsp;Debes aceptar las politicas de privacidad para continuar').show();
     }
     else if( $('#txtSexo').val() == "" ) {
         $("#alertaRegistro").html('<i class="fa fa-warning fa-lg"></i>&nbsp;Debes seleccionar el sexo').show();
-    }else if(cumple!="" && fecHoy<fecCum){
-        $("#alertaRegistro").html('<i class="fa fa-warning fa-lg"></i>&nbsp;La fecha nacimiento no puede ser futura').show();
+    //}else if(cumple!="" && fecHoy<fecCum){
+    //    $("#alertaRegistro").html('<i class="fa fa-warning fa-lg"></i>&nbsp;La fecha nacimiento no puede ser futura').show();
     }
     /*
     else if( $('#txtCumple').val() == "" ) {
